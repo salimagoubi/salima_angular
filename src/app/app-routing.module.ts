@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ListSuggestionComponent } from './core/list-suggestion/list-suggestion.component';
 
 const routes: Routes = [
-  { path: '', component: ListSuggestionComponent }
+  { path: '', loadChildren: () => import('./suggestions/suggestions.module').then(m => m.SuggestionsModule) },
+  { path: 'suggestions', loadChildren: () => import('./suggestions/suggestions.module').then(m => m.SuggestionsModule) },
+  { path: 'favorites', loadChildren: () => import('./favorites/favorites.module').then(m => m.FavoritesModule) }
 ];
 
 @NgModule({

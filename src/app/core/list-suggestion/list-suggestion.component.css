@@ -29,6 +29,22 @@
   box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
 }
 
+.btn-add {
+  display: block;
+  margin: 0 auto 18px;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn-add:hover {
+  background-color: #218838;
+}
+
 .layout {
   display: grid;
   grid-template-columns: 1fr 280px;

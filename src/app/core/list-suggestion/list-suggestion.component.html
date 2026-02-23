@@ -2,6 +2,8 @@
 
   <h2 class="title">Liste des suggestions</h2>
 
+  <button class="btn-add" [routerLink]="['/suggestions/add']">Ajouter une suggestion</button>
+
   <!-- Recherche -->
   <input
     class="search"
@@ -47,6 +49,10 @@
             [disabled]="isFavorite(s)"
           >
             ⭐ {{ isFavorite(s) ? 'Déjà en favoris' : 'Ajouter aux favoris' }}
+          </button>
+
+          <button class="btn btn-detail" [routerLink]="['/suggestions/detail', s.id]">
+            📄 Voir détails
           </button>
 
         </div>
